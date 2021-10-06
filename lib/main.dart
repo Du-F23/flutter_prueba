@@ -4,4 +4,9 @@ void main() {
   runApp();
 }
 
-class MyApp {}
+class MyApp extends StatelessWidget{
+  @override
+  Widget build()) {
+    return ;
+  }
+}
