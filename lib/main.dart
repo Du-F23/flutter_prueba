@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp();
+  runApp(new MyApp());
 }
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build()) {
-    return ;
+  Widget build(context) {
+    // ignore: prefer_const_constructors
+    return MaterialApp(
+      home: const Center(child: Text('Hola mundo')),
+    );
   }
 }
