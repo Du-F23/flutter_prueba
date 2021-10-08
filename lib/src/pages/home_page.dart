@@ -9,8 +9,12 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Titulo'),
         ),
-        body: const Center(
-          child: Text('Hola mundo'),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            // ignore: prefer_const_literals_to_create_immutables
+            children: <Widget>[const Text('Hola mundo'), const Text('0')],
+          ),
         ));
   }
 }
