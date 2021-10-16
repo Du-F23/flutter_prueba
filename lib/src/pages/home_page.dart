@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+    HomePage({Key? key}) : super(key: key);
+
+          final opciones = ['Uno', 'Dos', 'Tres'];
 
   @override
   Widget build(BuildContext context) {
@@ -9,12 +11,23 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Titulo'),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // ignore: prefer_const_literals_to_create_immutables
-            children: <Widget>[const Text('Hola mundo'), const Text('0')],
-          ),
-        ));
+        body: ListView(children: _crearitems(),));
   }
+
+  // ignore: unused_element
+  List<Widget> _crearitems() {
+    
+      List<Widget> lista = <Widget>[];
+      
+      for (String opt in opciones) {
+        final tempWidget = ListTile(title: Text(opt),);
+
+        lista.add(tempWidget);
+        lista.add(const Divider(height: 0.01,));
+      }
+
+    return lista;
+  }
+
+
 }
